@@ -1,0 +1,27 @@
+.container {
+	padding: 30px 50px 50px;
+	border: 1px solid lightgray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	padding: 6px 12px;
+	cursor: pointer;
+	font-size: 14px;
+	border: 1px black solid;
+	border-radius: 8px;
+	text-align: center;
+	color: black;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	transform: scale(1.01);
+}
+
+a:active {
+	transform: scale(0.95);
+}
