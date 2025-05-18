@@ -16,3 +16,25 @@ body {
 	flex-direction: column;
 	height: 100vh;
 }
+
+.container {
+	padding: 30px 50px 50px;
+	border: 1px solid lightgray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 50px;
+	gap: 20px;
+	transition: all 0.3s ease;
+}
+
+.container:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+	font-size: 3rem;
+}

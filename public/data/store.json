@@ -1,1 +1,10 @@
-[]
+[
+    {
+        "name": "pear",
+        "store": "麻股"
+    },
+    {
+        "name": "john",
+        "store": "teas"
+    }
+]
