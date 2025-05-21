@@ -23,6 +23,7 @@ router.post("/", (req, res) => {
 			...orderData,
 			id: Date.now(),
 			createTime: new Date().toISOString(),
+			items: [],
 		};
 
 		orders.push(newOrder);
