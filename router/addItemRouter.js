@@ -1,12 +1,18 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const router = express.Router();
 
 router.post("/get-order/:id", (req, res) => {
 	const item = req.body;
-	const orderId = req.params.id;
+	const orderId = parseInt(req.params.id);
+	const ordersPath = path.join(__dirname, "../public/data/orders.json");
 
-	fs.readFile("./public/data/orders.json", "utf-8", (err, data) => {
+	if (!item || !orderId) {
+		return res.status(400).json({ error: "缺少必要參數" });
+	}
+
+	fs.readFile(ordersPath, "utf-8", (err, data) => {
 		let orders = [];
 
 		if (!err) {
