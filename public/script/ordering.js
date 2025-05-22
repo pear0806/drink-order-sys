@@ -1,9 +1,9 @@
-const urlParams = new URLSearchParams(window.location.search);
-const orderId = urlParams.get("orderId");
+const orderId = new URLSearchParams(location.href).get("orderId");
 
 document.querySelector(".submitBtn").addEventListener("click", () => {
-	const nameInput = document.querySelector(".peopleName");
-	const drinkInput = document.querySelector(".peopleName");
+	console.log(orderId);
+	const nameInput = document.querySelector(".people");
+	const drinkInput = document.querySelector(".drink");
 	const sweetInput = document.querySelector(".sweet");
 	const iceInput = document.querySelector(".ice");
 	const remarkInput = document.querySelector(".remark");
