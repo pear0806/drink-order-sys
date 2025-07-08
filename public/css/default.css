@@ -58,3 +58,7 @@ a:hover {
 a:active {
 	transform: scale(0.95);
 }
+
+input {
+	text-overflow: ellipsis;
+}
