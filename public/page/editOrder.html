@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>創建訂單</title>
+		<link rel="stylesheet" href="../css/default.css" />
+		<link rel="stylesheet" href="../css/editOrder.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>創建訂單</h1>
+			<form action="POST">
+				<div class="inputDiv">
+					<label>發起人 : </label>
+					<input
+						type="text"
+						placeholder="發起人"
+						class="PeopleNameInput"
+					/>
+				</div>
+
+				<div class="inputDiv">
+					<label>Store : </label>
+					<select class="StoreSelect">
+						<option value="">請選擇店家</option>
+					</select>
+				</div>
+
+				<div class="inputDiv">
+					<label>備註 : </label>
+					<textarea placeholder="備註" class="remarkInput"></textarea>
+				</div>
+			</form>
+			<button class="submitBtn">Create Order</button>
+			<a href="../index.html">返回首頁</a>
+		</div>
+
+		<!-- <script src="../script/createOrder.js" defer></script> -->
+	</body>
+</html>
