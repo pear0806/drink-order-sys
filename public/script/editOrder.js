@@ -13,3 +13,36 @@ document.addEventListener("DOMContentLoaded", () => {
 			container.appendChild(homePageLink);
 		});
 });
+
+const createOrder = (orderData) => {
+	const result = document.createElement("div");
+	result.className = "order";
+
+	result.innerHTML = `
+		<div class="imformationDiv">
+			<h3>店家 :</h3>
+			<p>${orderData.store}</p>
+		</div>
+		
+		<div class="imformationDiv">
+			<h3>發起人 :</h3>
+			<p>${orderData.name}</p>
+		</div>
+
+		<div class="imformationDiv">
+			<h3>訂單ID :</h3>
+			<p class="id">${orderData.id}</p>
+		</div>
+
+        <div class="imformationDiv">
+            <h3>備註 :</h3>
+            <p>${orderData.remark?.trim() ? orderData.remark : "無"}</p>
+        </div>
+
+		<a class="enterBtn" href="../page/ordering.html?orderId=${
+			orderData.id
+		}">編輯訂單</a>
+	`;
+
+	return result;
+};

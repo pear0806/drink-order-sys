@@ -22,7 +22,7 @@ document.querySelector(".submitBtn").addEventListener("click", () => {
 		remark: remark,
 	};
 
-	fetch(`/get-order/${orderId}`, {
+	fetch(`/add-item/${orderId}/add-item`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",

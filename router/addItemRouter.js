@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const router = express.Router();
 
-router.post("/get-order/:id", (req, res) => {
+router.post("/:id/add-item", (req, res) => {
 	const item = req.body;
 	const orderId = parseInt(req.params.id);
 	const ordersPath = path.join(__dirname, "../public/data/orders.json");
@@ -24,7 +24,12 @@ router.post("/get-order/:id", (req, res) => {
 			}
 		}
 
-		order = orders.find((o) => (o.id = orderId));
+		const order = orders.find((o) => o.id === orderId);
+
+		if (!order) {
+			return res.status(404).json({ error: "找不到指定的訂單" });
+		}
+
 		order.items.push(item);
 
 		fs.writeFile(ordersPath, JSON.stringify(orders, null, 4), (err) => {

@@ -37,10 +37,9 @@ const createOrder = (orderData) => {
         <div class="imformationDiv">
             <h3>備註 :</h3>
             <p>${orderData.remark?.trim() ? orderData.remark : "無"}</p>
-
         </div>
 
-		<a class="getInOrderBtn" href="../page/ordering.html?orderId=${
+		<a class="enterBtn" href="../page/ordering.html?orderId=${
 			orderData.id
 		}">加入訂單</a>
 	`;
